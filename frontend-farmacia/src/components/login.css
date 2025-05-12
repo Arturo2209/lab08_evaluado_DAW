@@ -1,58 +1,102 @@
-/* Estilos para el componente Login */
+/* Fondo animado con degradado */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Contenedor principal */
 .login-container {
+  align-items: center;
+  justify-content: center;
+  
+  
   margin-top: 40px;
 }
 
+/* Tarjeta de login estilo glassmorphism */
 .login-card {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 30px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  width: 100%;
+  max-width: 400px;
 }
 
+/* Título del formulario */
 .login-card h2 {
-  color: #2c3e50;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 0.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #ffffff;
 }
 
+/* Etiquetas de los campos */
 .form-label {
-  font-weight: 500;
+  color: #dddddd;
 }
 
+/* Inputs personalizados */
+.form-control {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.form-control::placeholder {
+  color: #cccccc;
+}
+
+/* Botón con efecto neón */
 .btn-primary {
-  background-color: #3498db;
-  border-color: #3498db;
-  padding: 10px;
-  font-weight: 500;
+  background-color: #00d2ff;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 10px 20px;
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover, .btn-primary:focus {
-  background-color: #2980b9;
-  border-color: #2980b9;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.btn-primary:hover {
+  background-color: #3a7bd5;
+  box-shadow: 0 0 10px #3a7bd5, 0 0 20px #3a7bd5;
+  transform: scale(1.05);
 }
 
+/* Deshabilitado */
 .btn-primary:disabled {
   background-color: #7fb5d9;
-  border-color: #7fb5d9;
+  color: #333;
 }
 
+/* Enlace de registro */
 a {
-  color: #3498db;
+  color: #00d2ff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #2980b9;
   text-decoration: underline;
+  color: #3a7bd5;
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 576px) {
   .login-card {
     padding: 20px;
   }
