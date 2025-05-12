@@ -15,7 +15,7 @@ const dialectOptions = process.env.DB_SSL === 'true'
 const sequelize = new Sequelize(
     process.env.DB_NAME || 'bd_farmacia',
     process.env.DB_USER || 'root',
-    process.env.DB_PASSWORD || 'password',
+    process.env.DB_PASSWORD || '',
     {
         host:     process.env.DB_HOST || 'localhost',
         port:     process.env.DB_PORT || 3306,
